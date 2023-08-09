@@ -1,0 +1,25 @@
+package main
+
+import (
+  "fmt"
+  "time"
+)
+func main() {
+    fmt.Println("    `.-::::::-.`    ")
+    fmt.Println(".:-::::::::::::::-:.")
+    fmt.Println("`_:::    ::    :::_`")
+    fmt.Println(" .:( ^   :: ^   ):. ")
+    fmt.Println(" `:::   (..)   :::. ")
+    fmt.Println(" `:::::::UU:::::::` ")
+    fmt.Println(" .::::::::::::::::. ")
+    fmt.Println(" O::::::::::::::::O ")
+    fmt.Println(" -::::::::::::::::- ")
+    fmt.Println(" `::::::::::::::::` ")
+    fmt.Println("  .::::::::::::::.  ")
+    fmt.Println("    oO:::::::Oo     ")
+  // Set the location to Berlin (which automatically adjusts for CET and CEST)
+    loc, _ := time.LoadLocation("Europe/Berlin")
+    berlinTime := time.Now().In(loc)
+
+    fmt.Println(berlinTime.Format("15:04 02/01/2006"))
+}
